@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import {countryData} from '../countryData.js'
 import Card from './Card'
 import spinner from './spinner.gif'
-import { CountryListShimmer } from './countryListShimmer'
+import { CountryListShimmer } from './CountryListShimmer'
 
 
 const CountryList = ({query}) => {
