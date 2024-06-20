@@ -1,5 +1,5 @@
 import React, {useContext, useState}from 'react'
-import Search from './search'
+import Search from './Search'
 import '../style.css'
 import CountryList from './CountryList'
 import { useOutletContext } from 'react-router-dom'
