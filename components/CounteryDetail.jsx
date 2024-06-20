@@ -48,7 +48,7 @@ const CounteryDetail = () => {
           })).then((borders)=>{
             setTimeout(() => {
               SetCountryData((prevState)=>({...prevState, borders}))
-            },1000);
+            });
             
           })
     }
