@@ -4,8 +4,8 @@ import { useTheme } from '../hooks/theme'
 
 const Header = ({theme}) => {
 // const [isdark, setisdark] = theme
-// const  [isdark, setisdark] =  useContext(ThemeContext)
-const [isdark, setisdark] = useTheme()
+const  [isdark, setisdark] =  useContext(ThemeContext)
+// const [isdark, setisdark] = useTheme()
 
   return (
     <>

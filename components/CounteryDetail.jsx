@@ -6,10 +6,14 @@ import { ThemeContext } from '../context/themeContext'
 import { useTheme } from '../hooks/theme'
 import CountryDetailShimmer from './CountryDetailShimmer'
 
+
 const CounteryDetail = () => {
 
+  
     const prams = useParams()
+    console.log(prams)
     const countryName = prams.country
+    console.log(countryName)
     const [countryData, SetCountryData] = useState(null)
     const [notFind, setNotFind] = useState(false)
     const {state} = useLocation()

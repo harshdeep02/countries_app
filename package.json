@@ -1,11 +1,12 @@
 {
   "name": "19th-vid",
+  "homepage": "https://countries-data-prod.netlify.app/",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html && parcel watch index.html",
-    "build":  "parcel build index.html "
+    "build": "parcel build index.html && echo '/* /index.html 200' > build/_redirects"
   },
   "keywords": [],
   "author": "",

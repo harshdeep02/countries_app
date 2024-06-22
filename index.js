@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Home from './components/Home';
 import CounterDetail from './components/CounteryDetail';
 
+
+
 const router = createBrowserRouter([
     {
         path: "/",

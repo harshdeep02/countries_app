@@ -10,8 +10,8 @@ import { useTheme } from '../hooks/theme'
 const Home = () => {
   // const isdark = useOutletContext()
     const [query, setQuery] = useState('')
-    // const  [isdark] =  useContext(ThemeContext)
-    const [isdark, setisdark] = useTheme()
+    const  [isdark] =  useContext(ThemeContext)
+    // const [isdark, setisdark] = useTheme()
     
     const windowSize = useWidowsSize()
     // console.log(windowSize)
