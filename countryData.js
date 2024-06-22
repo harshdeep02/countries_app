@@ -30,7 +30,7 @@ export const countryData = [
     "languages": { "fra": "French" },
     "translations": {
       "ara": {
-        "official": "إقليم جزر واليس وفوتونا",
+        "official": "إقليم جزر واليس وفوتون",
         "common": "واليس وفوتونا"
       },
       "bre": {
