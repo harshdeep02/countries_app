@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html && parcel watch index.html",
-    "build": "parcel build index.html && copy _redirects dist\\_redirects"
+    "build": "parcel build index.html &&  _redirects dist\\_redirects"
   },
   "keywords": [],
   "author": "",
