@@ -9,12 +9,12 @@ const CountryList = ({query}) => {
 
   const [countryData, setCountryData] = useState([])
 
-
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
+    // fetch('https://restcountries.com/v3.1/all')
+    fetch('https://restcountries.com/v3.1/all?fields=name,capital,region,population,subregion,flags,currencies,languages,area,continents')
     .then((res) => res.json())
     .then((data) => {
-      // conso  le.log(data)
+      // console.log("data", data)
       setCountryData(data)
     }).catch((err)=>console.log(err))
 
@@ -26,10 +26,10 @@ const CountryList = ({query}) => {
 
   const [count, setCount] = useState(0)
 
-  useEffect(() => {
-  //  console.log("hii")
+  // useEffect(() => {
+  // //  console.log("hii")
   
-  }, [count, query]) // 2. use effect hook moniter the state also, if the state is changed the function will be run and we can also add on rmore state in this array
+  // }, [count, query]) // 2. use effect hook moniter the state also, if the state is changed the function will be run and we can also add on rmore state in this array
 
 
 

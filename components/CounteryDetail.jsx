@@ -11,9 +11,9 @@ const CounteryDetail = () => {
 
   
     const prams = useParams()
-    console.log(prams)
+    // console.log(prams)
     const countryName = prams.country
-    console.log(countryName)
+    // console.log(countryName)
     const [countryData, SetCountryData] = useState(null)
     const [notFind, setNotFind] = useState(false)
     const {state} = useLocation()
@@ -24,24 +24,24 @@ const CounteryDetail = () => {
 
     function updateCountryDetails(data){
       SetCountryData({
-        name:data.name.common,
-        native:Object.values(data.name.nativeName ||  {})[0]?.common,
-        region:data.region,
-        subRegion:data.subregion,
-        population:data.population,
-        capital:Object.values(data.capital ||  {})?.join(', '),
-        tld:data.tld[0],
-        currencies:Object.values(data.currencies||  {})[0]?.name,
-        languages:Object.values(data.languages ||  {})?.join(', '),
-        flag:data.flags.svg,
+        name:data?.name?.common,
+        native:Object.values(data?.name?.nativeName ||  {})[0]?.common,
+        region:data?.region,
+        subRegion:data?.subregion,
+        population:data?.population,
+        capital:Object.values(data?.capital ||  {})?.join(', '),
+        tld:data?.tld?.[0],
+        currencies:Object.values(data?.currencies||  {})[0]?.name,
+        languages:Object.values(data?.languages ||  {})?.join(', '),
+        flag:data?.flags?.svg,
         borders:[]
         })
 
-        if(!data.borders){
+        if(!data?.borders){
           data.borders = []
         }
 
-      Promise.all(data.borders.map((border)=>{
+      Promise.all(data?.borders?.map((border)=>{
         return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
               .then((res) => res.json())
               .then(([border]) => {
@@ -69,7 +69,7 @@ const CounteryDetail = () => {
         fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
         .then((res)=> res.json())
         .then(([data])=>{
-            console.log(data)
+            // console.log(data)
             updateCountryDetails(data)   
             
         })
