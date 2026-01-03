@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html && parcel watch index.html",
-    "build": "parcel build index.html && copy _redirects dist\\_redirects"
+    "build": "parcel build index.html && cpx _redirects dist"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
+    "cpx": "^1.5.0",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   }
